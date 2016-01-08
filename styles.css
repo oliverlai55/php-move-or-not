@@ -1,0 +1,17 @@
+body{
+	text-align: center;
+}
+
+#btn1, #btn2{
+	margin-right: 30%;
+    margin-top: 2%;
+
+}
+
+#btn1{
+	margin-left:31%;
+}
+
+#poll-btn{
+	margin-top: 4%;
+}
