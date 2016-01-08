@@ -22,6 +22,18 @@ include('inc/db_connect.php');
 
 // 	Next button... start over.
 
+	$query = "SELECT * FROM basketball";
+	$result = mysql_query($query);
+	while($row = mysql_fetch_assoc($result)){
+		$rows[] = $row;
+	}
+	$rand = rand ( 0, count($rows)-1 );
+
+	$match_id = $rows[$rand]['id'];
+	$team1 = $rows[$rand]['team1'];
+	$team2 = $rows[$rand]['team2'];
+	$team_pic = $rows[$rand]['team_pic'];
+	$team_pic = $rows[$rand]['team2_pic'];
 ?>
 
 <!DOCTYPE html>
