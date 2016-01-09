@@ -28,12 +28,15 @@ include('inc/db_connect.php');
 		$rows[] = $row;
 	}
 	$rand = rand ( 0, count($rows)-1 );
-
+// print "<pre>";
+// print_r($rand);
+// print_r($rows); 
 	$match_id = $rows[$rand]['id'];
 	$team1 = $rows[$rand]['team1'];
 	$team2 = $rows[$rand]['team2'];
-	$team_pic = $rows[$rand]['team_pic'];
-	$team_pic = $rows[$rand]['team2_pic'];
+	$team_pic1 = $rows[$rand]['team1_pic'];
+	$team_pic2 = $rows[$rand]['team2_pic'];
+
 ?>
 
 <!DOCTYPE html>
@@ -55,8 +58,16 @@ include('inc/db_connect.php');
 		<div class="row">
 			<div class="images col-sm-12">
 				<div class="col-sm-2"></div>
-				<img class="img1 col-sm-4" src="img/Duke-Blue-Devils.jpg">
-				<img class="img2 col-sm-4" src="img/uk-wildcats.png">
+				<img class="img1 col-sm-4" src=<?php print $team_pic1; ?>>
+				<img class="img2 col-sm-4" src=<?php print $team_pic2; ?>>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="teamnames col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="team1 col-sm-4"><?php print $team1; ?></div>
+				<div class="team2 col-sm-4"><?php print $team2; ?></div>
 				<div class="col-sm-2"></div>
 			</div>
 		</div>
