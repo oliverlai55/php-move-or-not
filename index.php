@@ -72,13 +72,14 @@ include('inc/db_connect.php');
 			</div>
 		</div>
 		<div class="row">
-			<div id="btn1" class="btn btn-primary">Vote
+			<div id="btn1" class="btn btn-primary" mid="<?php print $match_id; ?>" team="<?php print $team1; ?>" opp="<?php print $team2; ?>">Vote
 			</div>
-			<div id="btn2" class="btn btn-primary">Vote
+			<div id="btn2" class="btn btn-primary" mid="<?php print $match_id; ?>" team="<?php print $team2; ?>" opp="<?php print $team1; ?>">Vote
 			</div>
 		</div>
 		<div class="row">
-		<div id="poll-btn" class="btn btn-success">Poll Results</div>
+			<a id="next-vote" class="btn btn-success" href="/php-poll/">Next</a>
+			
 		</div>
 		
 	</div>
